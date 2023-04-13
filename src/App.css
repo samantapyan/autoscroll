@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.board {
+  background: yellow !important;
+  width: 5000px !important;
+  height: 4000px !important;
+}
+.item-section {
+  width: 50px;
+  /*float: left;*/
+  /*transform: translate(0,0);*/
+}
