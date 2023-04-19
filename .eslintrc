@@ -1,0 +1,72 @@
+{
+  "root": true,
+  "extends": "react-app",
+  "plugins": [
+    "import",
+    "unused-imports",
+    "prettier"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.tsx",
+        "*.js"
+      ],
+      "rules": {
+        "unused-imports/no-unused-imports": "error",
+        "unused-imports/no-unused-vars": [
+          "error",
+          {
+            "vars": "all",
+            "varsIgnorePattern": "^_",
+            "args": "after-used",
+            "argsIgnorePattern": "^_"
+          }
+        ],
+        "no-shadow": "off",
+        "no-undef": "off",
+        "import/no-cycle": "error",
+        "sort-imports": [
+          "error",
+          {
+            "ignoreCase": true,
+            "ignoreDeclarationSort": true
+          }
+        ],
+        "import/order": [
+          "error",
+          {
+            "groups": [
+              [
+                "external",
+                "builtin"
+              ],
+              "internal",
+              [
+                "sibling",
+                "parent"
+              ],
+              "index"
+            ],
+            "pathGroups": [
+              {
+                "pattern": "@src/**",
+                "group": "internal"
+              }
+            ],
+            "pathGroupsExcludedImportTypes": [
+              "internal",
+              "react"
+            ],
+            "newlines-between": "never",
+            "alphabetize": {
+              "order": "asc",
+              "caseInsensitive": true
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

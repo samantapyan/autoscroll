@@ -1,13 +1,10 @@
-import './App.css';
-import MyDraggableElement from "./pages/Draggble/Draggable"
-import Beautifull from "./pages/Beautifull/Beautifull"
+import "./App.css";
+import MyDraggableElement from "./pages/Draggble/Draggable";
 
 function App() {
-
   return (
     <div className="App">
-      <MyDraggableElement/>
-      {/*<Beautifull/>*/}
+      <MyDraggableElement />
     </div>
   );
 }
